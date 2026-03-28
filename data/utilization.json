@@ -1,0 +1,22 @@
+[
+  {"employeeId": "EMP001", "2M": 78.5, "YTD": 85.2, "12M": 82.1},
+  {"employeeId": "EMP002", "2M": 92.3, "YTD": 88.7, "12M": 89.5},
+  {"employeeId": "EMP003", "2M": 85.1, "YTD": 83.9, "12M": 84.2},
+  {"employeeId": "EMP004", "2M": 45.2, "YTD": 52.8, "12M": 58.3},
+  {"employeeId": "EMP005", "2M": 98.5, "YTD": 95.2, "12M": 94.8},
+  {"employeeId": "EMP006", "2M": 62.4, "YTD": 68.5, "12M": 71.2},
+  {"employeeId": "EMP007", "2M": 100.0, "YTD": 97.3, "12M": 96.5},
+  {"employeeId": "EMP008", "2M": 88.9, "YTD": 86.4, "12M": 87.1},
+  {"employeeId": "EMP009", "2M": 82.7, "YTD": 80.5, "12M": 81.3},
+  {"employeeId": "EMP010", "2M": 95.6, "YTD": 92.1, "12M": 91.8},
+  {"employeeId": "EMP011", "2M": 71.3, "YTD": 75.8, "12M": 77.4},
+  {"employeeId": "EMP012", "2M": 78.2, "YTD": 81.3, "12M": 79.9},
+  {"employeeId": "EMP013", "2M": 65.8, "YTD": 70.2, "12M": 72.6},
+  {"employeeId": "EMP014", "2M": 73.5, "YTD": 76.9, "12M": 75.2},
+  {"employeeId": "EMP015", "2M": 81.4, "YTD": 79.6, "12M": 80.1},
+  {"employeeId": "EMP016", "2M": 94.2, "YTD": 91.7, "12M": 92.3},
+  {"employeeId": "EMP017", "2M": 48.6, "YTD": 55.3, "12M": 61.2},
+  {"employeeId": "EMP018", "2M": 86.3, "YTD": 84.1, "12M": 85.0},
+  {"employeeId": "EMP019", "2M": 92.8, "YTD": 90.5, "12M": 91.2},
+  {"employeeId": "EMP020", "2M": 99.1, "YTD": 96.8, "12M": 95.9}
+]

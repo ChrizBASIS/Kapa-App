@@ -1,0 +1,988 @@
+/* ================================================================
+   KAPA-App — SAP Fiori Horizon Redesign
+   Clean, modern, minimal — inspired by Float, Runn, SAP Horizon
+   ================================================================ */
+
+/* ===== SAP Horizon Theme Variable Overrides ===== */
+:root {
+    --sapButton_Emphasized_Background: #2B6CB0;
+    --sapButton_Emphasized_BorderColor: #2B6CB0;
+    --sapButton_Emphasized_TextColor: #FFFFFF;
+    --sapButton_Emphasized_Hover_Background: #2C5282;
+    --sapButton_Emphasized_Hover_BorderColor: #2C5282;
+    --sapButton_Emphasized_Hover_TextColor: #FFFFFF;
+    --sapButton_Emphasized_Active_Background: #2C5282;
+    --sapButton_Emphasized_Active_BorderColor: #2C5282;
+    --sapButton_Emphasized_Active_TextColor: #FFFFFF;
+    --sapButton_Emphasized_Focused_Background: #2B6CB0;
+    --sapButton_Emphasized_Focused_BorderColor: #2B6CB0;
+    --sapButton_Emphasized_Focused_TextColor: #FFFFFF;
+}
+
+/* ===== Design Tokens (Horizon Palette — Refined) ===== */
+:root {
+    --color-primary: #2B6CB0;
+    --color-primary-hover: #2C5282;
+    --color-primary-light: #EBF8FF;
+    --color-primary-gradient: linear-gradient(135deg, #2B6CB0 0%, #4299E1 100%);
+    --color-dark: #1A202C;
+    --color-text: #2D3748;
+    --color-text-secondary: #4A5568;
+    --color-text-muted: #A0AEC0;
+    --color-border: #E2E8F0;
+    --color-border-light: #EDF2F7;
+    --color-bg: #F7FAFC;
+    --color-bg-card: #FFFFFF;
+    --color-success: #38A169;
+    --color-success-light: #F0FFF4;
+    --color-warning: #DD6B20;
+    --color-warning-light: #FFFAF0;
+    --color-error: #E53E3E;
+    --color-error-light: #FFF5F5;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.08);
+    --font-family: "72", "72full", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Global Reset ===== */
+body {
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sapUiBody {
+    background-color: var(--color-bg) !important;
+}
+
+/* ===== Shell & Page ===== */
+.sapMShell {
+    background-color: var(--color-bg) !important;
+}
+
+.sapMShellBG {
+    background-color: var(--color-bg) !important;
+}
+
+.sapMPage {
+    background-color: var(--color-bg) !important;
+}
+
+.sapMPageHeader {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.sapMPageBgSolid {
+    background-color: var(--color-bg) !important;
+}
+
+.sapMBar {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+/* ===== Typography ===== */
+.sapMTitle {
+    color: var(--color-dark) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+.sapMLabel {
+    color: var(--color-text-secondary) !important;
+    font-size: 0.8125rem !important;
+    font-weight: 500 !important;
+}
+
+.sapMText {
+    color: var(--color-text) !important;
+    line-height: 1.5 !important;
+}
+
+/* ===== IconTabBar Navigation ===== */
+.sapMITB {
+    background-color: var(--color-bg-card) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    box-shadow: none !important;
+}
+
+.sapMITBHead {
+    background-color: var(--color-bg-card) !important;
+    padding: var(--spacing-xs) var(--spacing-xl) !important;
+}
+
+.sapMITBFilter {
+    margin: 0 var(--spacing-sm) !important;
+    transition: all var(--transition-fast) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+}
+
+.sapMITBFilter:hover {
+    background-color: var(--color-primary-light) !important;
+}
+
+.sapMITBSelected .sapMITBText {
+    color: var(--color-primary) !important;
+    font-weight: 700 !important;
+}
+
+.sapMITBFilter .sapMITBText {
+    color: var(--color-text-secondary) !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+}
+
+.sapMITBContentArrow {
+    display: none !important;
+}
+
+.sapMITBCount {
+    background-color: var(--color-primary-light) !important;
+    color: var(--color-primary) !important;
+    border-radius: 100px !important;
+    font-weight: 600 !important;
+    font-size: 0.6875rem !important;
+}
+
+/* ===== Panels — Flat, Clean ===== */
+.sapMPanel {
+    background-color: var(--color-bg-card) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-md) !important;
+    margin-bottom: var(--spacing-md) !important;
+    overflow: hidden;
+    transition: box-shadow var(--transition-normal) !important;
+}
+
+.sapMPanelHdr {
+    background-color: var(--color-bg-card) !important;
+    background-image: none !important;
+    background: none !important;
+    border-bottom: 1px solid var(--color-border-light) !important;
+    border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+    color: var(--color-dark) !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+.sapMPanelWrappingDiv {
+    border: none !important;
+}
+
+.sapMPanelContent {
+    padding: var(--spacing-md) !important;
+}
+
+/* ===== Cards (sap.f.Card) — Subtle ===== */
+.sapFCard {
+    background-color: var(--color-bg-card) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-md) !important;
+    transition: all var(--transition-normal) !important;
+    overflow: hidden;
+}
+
+.sapFCard:hover {
+    box-shadow: var(--shadow-lg) !important;
+    transform: translateY(-2px) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.sapFCardHeader {
+    background: var(--color-bg-card) !important;
+    border-bottom: 1px solid var(--color-border-light) !important;
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+}
+
+.sapFCardHeaderTitle {
+    color: var(--color-dark) !important;
+    font-weight: 700 !important;
+    font-size: 0.9375rem !important;
+}
+
+/* ===== KPI Dashboard ===== */
+.kpiDashboard {
+    margin-bottom: 0 !important;
+}
+
+.kpiDashboard .sapMPanelHdr {
+    display: none !important;
+}
+
+.kpiDashboard .sapMPanelContent {
+    padding: var(--spacing-lg) !important;
+}
+
+.kpiDashboard.sapMPanel {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+/* ===== KPI Tiles ===== */
+.kpiTile.sapMGT {
+    margin: var(--spacing-sm) !important;
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid var(--color-border) !important;
+    box-shadow: var(--shadow-md) !important;
+    background-color: var(--color-bg-card) !important;
+    transition: all var(--transition-normal) !important;
+}
+
+.kpiTile.sapMGT:hover {
+    box-shadow: var(--shadow-lg) !important;
+    transform: translateY(-2px) !important;
+}
+
+.kpiTile .sapMGTHdrTxt {
+    color: var(--color-text-secondary) !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sapMNCValue {
+    font-weight: 800 !important;
+    letter-spacing: -0.03em;
+    font-size: 2rem !important;
+}
+
+/* ===== KPI Cards ===== */
+.kpiCard {
+    margin: var(--spacing-sm) !important;
+    min-width: 300px !important;
+}
+
+.kpiCard .sapMListItem {
+    border-bottom: 1px solid var(--color-border-light) !important;
+}
+
+.kpiCard .sapMListItem:last-child {
+    border-bottom: none !important;
+}
+
+.kpiCard .sapMListItem:hover {
+    background-color: var(--color-primary-light) !important;
+}
+
+.kpiCard .sapMSLITitle {
+    font-weight: 500 !important;
+    color: var(--color-text) !important;
+    font-size: 0.875rem !important;
+}
+
+.kpiCard .sapMSLIDescription {
+    color: var(--color-text-muted) !important;
+    font-size: 0.75rem !important;
+}
+
+/* ===== Section Labels ===== */
+.sectionLabel {
+    font-size: 0.6875rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: var(--color-text-muted) !important;
+    font-weight: 600 !important;
+    padding-bottom: var(--spacing-sm) !important;
+}
+
+/* ===== Toolbars ===== */
+.sapMTB {
+    background-color: var(--color-bg-card) !important;
+    border-bottom: 1px solid var(--color-border-light) !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+}
+
+.sapMTBShrinkable {
+    background-color: transparent !important;
+}
+
+/* ===== Buttons ===== */
+.sapMBtn {
+    border-radius: var(--radius-md) !important;
+    transition: all var(--transition-fast) !important;
+    font-weight: 500 !important;
+}
+
+.sapMBtn:hover {
+    transform: none !important;
+}
+
+.sapMBtn.sapMBtnEmphasized,
+.sapMBtn.sapMBtnEmphasized > .sapMBtnInner,
+.sapMBtn.sapMBtnEmphasized .sapMBtnInner,
+.sapMBar .sapMBtn.sapMBtnEmphasized > .sapMBtnInner,
+.sapMDialog .sapMBtn.sapMBtnEmphasized > .sapMBtnInner,
+.sapMTB .sapMBtn.sapMBtnEmphasized > .sapMBtnInner,
+.sapMOTB .sapMBtn.sapMBtnEmphasized > .sapMBtnInner {
+    background-color: var(--color-primary) !important;
+    background-image: none !important;
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 4px rgba(43, 108, 176, 0.3) !important;
+}
+
+.sapMBtn.sapMBtnEmphasized .sapMBtnContent,
+.sapMBtn.sapMBtnEmphasized .sapMBtnIcon,
+.sapMBtn.sapMBtnEmphasized > .sapMBtnInner > .sapMBtnContent,
+.sapMBtn.sapMBtnEmphasized .sapMBtnContent > bdi {
+    color: #FFFFFF !important;
+}
+
+.sapMBtn.sapMBtnEmphasized:hover > .sapMBtnInner,
+.sapMBtn.sapMBtnEmphasized:focus > .sapMBtnInner {
+    background-color: var(--color-primary-hover) !important;
+    background: var(--color-primary-hover) !important;
+    border-color: var(--color-primary-hover) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 8px rgba(43, 108, 176, 0.35) !important;
+}
+
+.sapMBtnTransparent {
+    border-radius: var(--radius-md) !important;
+}
+
+.sapMBtnTransparent:hover {
+    background-color: var(--color-primary-light) !important;
+}
+
+/* ===== Segmented Button ===== */
+.sapMSegB {
+    border-radius: var(--radius-md) !important;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm) !important;
+    border: 1px solid var(--color-border) !important;
+}
+
+.sapMSegBBtn {
+    border-radius: 0 !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.sapMSegBBtnSel {
+    background: var(--color-primary-gradient) !important;
+    color: white !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* ===== Tables ===== */
+.sapUiTable {
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden !important;
+    border: 1px solid var(--color-border) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.sapUiTableHdr {
+    background-color: var(--color-bg-card) !important;
+    background-image: none !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    padding: var(--spacing-sm) var(--spacing-lg) !important;
+}
+
+.sapUiTableColHdr {
+    background: linear-gradient(180deg, #F8FAFC 0%, #EDF2F7 100%) !important;
+    border-bottom: 2px solid var(--color-border) !important;
+}
+
+.sapUiTableColHdrCnt {
+    background: transparent !important;
+}
+
+.sapUiTableCol {
+    background: transparent !important;
+}
+
+.sapUiTableRowHvr {
+    background-color: var(--color-primary-light) !important;
+    transition: background-color var(--transition-fast) !important;
+}
+
+.sapUiTableRowSel {
+    background-color: #DBEAFE !important;
+}
+
+.sapUiTableCell {
+    border-color: var(--color-border-light) !important;
+}
+
+/* ===== Team Viewer ===== */
+.teamViewerPanel {
+    margin-bottom: var(--spacing-md) !important;
+}
+
+.teamViewerPanel .sapMPanelHdr {
+    display: none !important;
+}
+
+.employeeInfo {
+    padding: var(--spacing-sm) !important;
+}
+
+.employeeName {
+    font-weight: 600 !important;
+    font-size: 0.8125rem !important;
+    color: var(--color-dark) !important;
+}
+
+.employeeTeam {
+    font-size: 0.6875rem !important;
+    color: var(--color-text-muted) !important;
+    margin-top: 2px;
+}
+
+.ampelIndicator {
+    margin-top: var(--spacing-xs) !important;
+}
+
+.weekCell {
+    min-height: 60px;
+    padding: var(--spacing-xs);
+}
+
+.weekCellText {
+    margin: 4px 0 !important;
+    font-size: 0.75rem !important;
+    padding: 4px 8px !important;
+    display: block !important;
+    background-color: rgba(0, 112, 242, 0.08) !important;
+    border-radius: var(--radius-sm) !important;
+    border-left: 3px solid var(--color-primary) !important;
+}
+
+/* ===== KAPA-Call Table ===== */
+.kapaCallPanel {
+    margin-bottom: var(--spacing-md) !important;
+}
+
+.kapaCallPanel .sapMPanelHdr {
+    display: none !important;
+}
+
+/* ===== Ampel Status — Modern Colors ===== */
+.ampelGreen {
+    background-color: var(--color-success) !important;
+    color: white !important;
+    border-color: var(--color-success) !important;
+}
+
+.ampelYellow {
+    background-color: var(--color-warning) !important;
+    color: white !important;
+    border-color: var(--color-warning) !important;
+}
+
+.ampelRed {
+    background-color: var(--color-error) !important;
+    color: white !important;
+    border-color: var(--color-error) !important;
+}
+
+/* ===== Project Status ===== */
+.projectFirm {
+    background-color: var(--color-primary) !important;
+    color: white !important;
+}
+
+.projectOption {
+    background-color: var(--color-warning) !important;
+    color: white !important;
+}
+
+.projectOverbooked {
+    background-color: var(--color-error) !important;
+    color: white !important;
+}
+
+/* ===== ObjectStatus Icons — Clean ===== */
+.sapMObjStatusIcon .sapUiIcon {
+    font-size: 0.875rem !important;
+}
+
+.sapMObjStatus {
+    font-weight: 600 !important;
+    font-size: 0.8125rem !important;
+}
+
+/* Success (green) status */
+.sapMObjStatusSuccess .sapMObjStatusIcon .sapUiIcon {
+    color: var(--color-success) !important;
+}
+
+/* Warning (yellow) status */
+.sapMObjStatusWarning .sapMObjStatusIcon .sapUiIcon {
+    color: #E6A200 !important;
+}
+
+/* Error (red) status */
+.sapMObjStatusError .sapMObjStatusIcon .sapUiIcon {
+    color: var(--color-error) !important;
+}
+
+/* ===== Skill Badges ===== */
+.skillBadge {
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 2px;
+    background-color: var(--color-primary-light);
+    border: 1px solid var(--color-primary);
+    border-radius: 100px;
+    font-size: 0.6875rem;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.skillBadge.custom {
+    background-color: var(--color-warning-light);
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+}
+
+/* ===== Dialogs ===== */
+.sapMDialog {
+    border-radius: var(--radius-xl) !important;
+    box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0,0,0,0.03) !important;
+    border: none !important;
+}
+
+.sapMDialogTitle {
+    font-weight: 700 !important;
+    color: var(--color-dark) !important;
+    font-size: 1.125rem !important;
+    letter-spacing: -0.01em;
+}
+
+.sapMDialogSection {
+    padding: var(--spacing-xl) !important;
+}
+
+.sapMDialog .sapMBar {
+    border-color: var(--color-border-light) !important;
+    background: rgba(255,255,255,0.95) !important;
+}
+
+/* ===== Inputs ===== */
+.sapMInput {
+    border-radius: var(--radius-md) !important;
+}
+
+.sapMInputBaseInner {
+    border-radius: var(--radius-md) !important;
+    border-color: var(--color-border) !important;
+    font-size: 0.875rem !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.sapMInputBaseInner:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.12) !important;
+    outline: none !important;
+}
+
+/* ===== Select (Dropdowns) ===== */
+.sapMSlt {
+    border-radius: var(--radius-md) !important;
+}
+
+.sapMSltArrow {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0 !important;
+}
+
+.sapMSltNative,
+.sapMSltLabel {
+    font-size: 0.8125rem !important;
+}
+
+/* ===== ComboBox / MultiComboBox ===== */
+.sapMComboBoxBaseArrow {
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+}
+
+/* ===== SearchField ===== */
+.sapMSF {
+    border-radius: var(--radius-sm) !important;
+}
+
+/* ===== DatePicker ===== */
+.sapMDP {
+    border-radius: var(--radius-sm) !important;
+}
+
+/* ===== Links ===== */
+.sapMLnk {
+    color: var(--color-primary) !important;
+    font-weight: 500 !important;
+    font-size: 0.8125rem !important;
+    text-decoration: none !important;
+}
+
+.sapMLnk:hover {
+    color: var(--color-primary-hover) !important;
+    text-decoration: underline !important;
+}
+
+/* ===== Lists ===== */
+.sapMList {
+    background-color: var(--color-bg-card) !important;
+}
+
+.sapMListItem {
+    border-color: var(--color-border-light) !important;
+}
+
+.sapMListItemActive {
+    background-color: var(--color-primary-light) !important;
+}
+
+/* ===== MessageStrip ===== */
+.sapMMsgStrip {
+    border-radius: var(--radius-sm) !important;
+    margin: var(--spacing-sm) 0 !important;
+}
+
+/* ===== GenericTile (KPI) ===== */
+.sapMGT {
+    border-radius: var(--radius-md) !important;
+}
+
+/* ===== Checkbox ===== */
+.sapMCb {
+    font-size: 0.8125rem !important;
+}
+
+/* ===== Filter Chips Bar ===== */
+.filterChipBar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border-light);
+    flex-wrap: wrap;
+}
+
+.filterChipBar .sapMToken {
+    border-radius: 100px !important;
+    background-color: var(--color-primary-light) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+    font-size: 0.75rem !important;
+}
+
+/* ===== Utility Classes ===== */
+.textCenter { text-align: center; }
+.textBold { font-weight: 600; }
+.textMuted { color: var(--color-text-muted) !important; }
+.fullWidth { width: 100%; }
+.marginTop { margin-top: var(--spacing-md); }
+.marginBottom { margin-bottom: var(--spacing-md); }
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-text-muted);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-secondary);
+}
+
+/* ===== Loading ===== */
+.loadingOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+}
+
+/* ===== Empty State ===== */
+.emptyState {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    color: var(--color-text-muted);
+}
+
+.emptyState .sapUiIcon {
+    font-size: 3rem;
+    color: var(--color-border);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeIn {
+    animation: fadeIn 0.25s ease-out;
+}
+
+/* ===== Scrolling ===== */
+.sapMPage > section {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sapMITBContent {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.sapUiTableCCnt {
+    overflow: auto !important;
+}
+
+/* Allow horizontal scroll on tables in narrow viewports */
+.sapUiTable {
+    min-width: 0 !important;
+}
+
+/* ===== Responsive — Tablet (<=1024px) ===== */
+@media (max-width: 1024px) {
+    .kpiCard {
+        min-width: 260px !important;
+    }
+    
+    .weekCellButton {
+        font-size: 0.625rem !important;
+    }
+
+    #teamViewerFilterBar,
+    #kapaCallFilterBar {
+        padding: var(--spacing-sm) var(--spacing-md) !important;
+        gap: var(--spacing-sm) !important;
+    }
+
+    #teamViewerFilterBar > .sapMFlexItem,
+    #kapaCallFilterBar > .sapMFlexItem {
+        min-width: 140px;
+        max-width: 200px;
+    }
+
+    .sapMPageHeader .sapMBarRight {
+        flex-wrap: wrap;
+    }
+}
+
+/* ===== Responsive — Mobile (<=768px) ===== */
+@media (max-width: 768px) {
+    /* Page header: stack items */
+    .sapMPageHeader {
+        min-height: auto !important;
+    }
+
+    .sapMBar {
+        flex-wrap: wrap !important;
+    }
+
+    /* Compact tab bar */
+    .sapMITBHead {
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
+    }
+
+    .sapMITBFilter {
+        margin: 0 2px !important;
+        padding: var(--spacing-xs) 4px !important;
+    }
+
+    .sapMITBFilter .sapMITBText {
+        font-size: 0.75rem !important;
+    }
+
+    /* Dashboard: full-width cards */
+    .kpiCard {
+        min-width: 100% !important;
+        width: 100% !important;
+        margin: var(--spacing-xs) 0 !important;
+    }
+
+    .kpiTile.sapMGT {
+        width: calc(50% - 1rem) !important;
+        min-width: auto !important;
+    }
+
+    /* Filter bars: stack vertically */
+    #teamViewerFilterBar,
+    #kapaCallFilterBar {
+        flex-direction: column !important;
+        padding: var(--spacing-sm) !important;
+        gap: var(--spacing-sm) !important;
+        border-radius: var(--radius-md) !important;
+    }
+
+    #teamViewerFilterBar > .sapMFlexItem,
+    #kapaCallFilterBar > .sapMFlexItem {
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Table toolbar: allow wrapping */
+    .sapMOTB,
+    .sapMTB {
+        flex-wrap: wrap !important;
+        height: auto !important;
+        min-height: 48px;
+        padding: var(--spacing-xs) !important;
+        gap: 4px;
+    }
+
+    /* Table: enable horizontal scrolling */
+    .sapUiTable {
+        border-radius: var(--radius-md) !important;
+    }
+
+    .sapUiTableCCnt {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Smaller row height on mobile */
+    .sapUiTableRow > td {
+        padding: 4px 6px !important;
+    }
+
+    /* Dashboard employee filter full width */
+    #dashboardEmployeeFilter {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Dashboard header stack */
+    #dashboardContainer > .sapMHBox {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: var(--spacing-sm);
+    }
+
+    /* Section labels */
+    .sectionLabel {
+        font-size: 0.625rem !important;
+    }
+
+    /* Dialogs fullscreen on mobile */
+    .sapMDialog {
+        width: 95vw !important;
+        max-width: 95vw !important;
+        border-radius: var(--radius-lg) !important;
+    }
+
+    .sapMDialogSection {
+        padding: var(--spacing-md) !important;
+    }
+}
+
+/* ===== Responsive — Small Mobile (<=480px) ===== */
+@media (max-width: 480px) {
+    .kpiTile.sapMGT {
+        width: 100% !important;
+        margin: var(--spacing-xs) !important;
+    }
+
+    .sapMNCValue {
+        font-size: 1.5rem !important;
+    }
+
+    .sapMPageHeader {
+        padding: 0 var(--spacing-xs) !important;
+    }
+
+    .sapMITBFilter .sapMITBCount {
+        display: none !important;
+    }
+
+    /* Hide less important header buttons on very small screens */
+    #saveFilterVariantBtn {
+        display: none !important;
+    }
+}
+
+/* ===== Print ===== */
+@media print {
+    .sapMBtn, .sapMTB, .sapMITB {
+        display: none !important;
+    }
+    
+    .sapUiTable {
+        font-size: 0.75rem;
+    }
+}
+
+/* ===== Filter Bar (Dropdown Filters) ===== */
+#teamViewerFilterBar,
+#kapaCallFilterBar {
+    background: linear-gradient(135deg, var(--color-bg-card) 0%, var(--color-bg) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    gap: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+}
+
+#teamViewerFilterBar > .sapMFlexItem,
+#kapaCallFilterBar > .sapMFlexItem {
+    min-width: 160px;
+    flex: 1;
+    max-width: 220px;
+}
+
+#teamViewerFilterBar .sapMSlt,
+#kapaCallFilterBar .sapMSlt,
+#teamViewerFilterBar .sapMMultiComboBox,
+#kapaCallFilterBar .sapMMultiComboBox {
+    min-width: 150px !important;
+    width: 100% !important;
+}
+
+#teamViewerFilterBar .sapMLabel,
+#kapaCallFilterBar .sapMLabel {
+    font-size: 0.6875rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+    color: var(--color-text-muted) !important;
+    font-weight: 600 !important;
+}
+
+/* ===== Remove global transition override ===== */
+/* Horizon uses subtle, targeted transitions only */

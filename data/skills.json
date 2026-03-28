@@ -1,0 +1,415 @@
+[
+  {
+    "id": "SKL001",
+    "name": "SD",
+    "category": "SAP_Modules",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL002",
+    "name": "MM",
+    "category": "SAP_Modules",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL003",
+    "name": "PP",
+    "category": "SAP_Modules",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL004",
+    "name": "PM",
+    "category": "SAP_Modules",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL005",
+    "name": "FI/CO",
+    "category": "SAP_Modules",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL006",
+    "name": "HR",
+    "category": "SAP_Modules",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL007",
+    "name": "QM",
+    "category": "SAP_Modules",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL001",
+    "name": "SAP S/4HANA",
+    "category": "ERP Core",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL002",
+    "name": "SAP ECC 6.0",
+    "category": "ERP Core",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL003",
+    "name": "SAP FI (Financial Accounting)",
+    "category": "Finance",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL004",
+    "name": "SAP CO (Controlling)",
+    "category": "Finance",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL005",
+    "name": "SAP SD (Sales & Distribution)",
+    "category": "Logistics",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL006",
+    "name": "SAP MM (Materials Management)",
+    "category": "Logistics",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL007",
+    "name": "SAP PP (Production Planning)",
+    "category": "Manufacturing",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL008",
+    "name": "SAP QM (Quality Management)",
+    "category": "Manufacturing",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL009",
+    "name": "SAP PM (Plant Maintenance)",
+    "category": "Manufacturing",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL010",
+    "name": "SAP WM (Warehouse Management)",
+    "category": "Logistics",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL011",
+    "name": "SAP EWM (Extended Warehouse Mgmt)",
+    "category": "Logistics",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL012",
+    "name": "SAP TM (Transportation Management)",
+    "category": "Logistics",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL013",
+    "name": "SAP HCM (Human Capital Management)",
+    "category": "HR",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL014",
+    "name": "SAP SuccessFactors",
+    "category": "Cloud HR",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL015",
+    "name": "SAP Ariba",
+    "category": "Procurement",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL016",
+    "name": "SAP Concur",
+    "category": "Travel & Expense",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL017",
+    "name": "SAP Fieldglass",
+    "category": "External Workforce",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL018",
+    "name": "SAP BTP (Business Technology Platform)",
+    "category": "Cloud Platform",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL019",
+    "name": "SAP HANA",
+    "category": "Database",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL020",
+    "name": "SAP Fiori",
+    "category": "UX/UI",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL021",
+    "name": "SAPUI5",
+    "category": "Development",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL022",
+    "name": "ABAP",
+    "category": "Development",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL023",
+    "name": "ABAP OO (Object Oriented)",
+    "category": "Development",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL024",
+    "name": "SAP CDS Views",
+    "category": "Development",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL025",
+    "name": "SAP Analytics Cloud (SAC)",
+    "category": "Analytics",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL026",
+    "name": "SAP BW/4HANA",
+    "category": "Data Warehouse",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL027",
+    "name": "SAP IBP (Integrated Business Planning)",
+    "category": "Supply Chain",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL028",
+    "name": "SAP APO (Advanced Planning)",
+    "category": "Supply Chain",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL029",
+    "name": "SAP GTS (Global Trade Services)",
+    "category": "Trade Compliance",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL030",
+    "name": "SAP Solution Manager",
+    "category": "Application Management",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL031",
+    "name": "SAP Basis Administration",
+    "category": "Technical",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL032",
+    "name": "SAP Security & Authorization",
+    "category": "Security",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL033",
+    "name": "SAP Integration (PI/PO)",
+    "category": "Integration",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL034",
+    "name": "SAP Cloud Integration",
+    "category": "Integration",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL035",
+    "name": "SAP MDG (Master Data Governance)",
+    "category": "Data Management",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL036",
+    "name": "SAP GRC (Governance, Risk, Compliance)",
+    "category": "Compliance",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL037",
+    "name": "SAP Activate Methodology",
+    "category": "Methodology",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL038",
+    "name": "ASAP Methodology",
+    "category": "Methodology",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL039",
+    "name": "S/4HANA Migration",
+    "category": "Transformation",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL040",
+    "name": "Greenfield Implementation",
+    "category": "Implementation",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL041",
+    "name": "Brownfield Conversion",
+    "category": "Implementation",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL042",
+    "name": "Business Process Optimization",
+    "category": "Consulting",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL043",
+    "name": "Change Management",
+    "category": "Consulting",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL044",
+    "name": "Project Management (PMP/Prince2)",
+    "category": "Management",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKILL045",
+    "name": "Agile/Scrum",
+    "category": "Methodology",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL032",
+    "name": "Python",
+    "category": "Languages",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL033",
+    "name": "Java",
+    "category": "Languages",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL034",
+    "name": "JavaScript",
+    "category": "Languages",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL035",
+    "name": "SQL",
+    "category": "Languages",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL036",
+    "name": "Analytics",
+    "category": "Technologies",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL037",
+    "name": "Procurement",
+    "category": "SAP_Modules",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": "SKL038",
+    "name": "Planning",
+    "category": "SAP_Modules",
+    "isCustom": false,
+    "createdAt": "2026-01-01T00:00:00Z"
+  }
+]

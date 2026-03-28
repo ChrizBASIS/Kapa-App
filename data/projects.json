@@ -1,0 +1,146 @@
+[
+  {
+    "id": "PRJ001",
+    "name": "Internal",
+    "customer": "Internal",
+    "startDate": "2026-02-01",
+    "endDate": "2026-12-31",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ002",
+    "name": "Phoenix Digital",
+    "customer": "Phoenix Technologies",
+    "startDate": "2026-03-01",
+    "endDate": "2026-06-30",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ003",
+    "name": "Atlas Transform",
+    "customer": "Atlas Industries",
+    "startDate": "2026-01-15",
+    "endDate": "2026-05-15",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ004",
+    "name": "Nexus Cloud",
+    "customer": "Nexus Solutions",
+    "startDate": "2026-02-10",
+    "endDate": "2026-04-30",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ005",
+    "name": "Zenith ERP",
+    "customer": "Zenith Corp",
+    "startDate": "2026-03-15",
+    "endDate": "2026-07-31",
+    "status": "Pipeline"
+  },
+  {
+    "id": "PRJ006",
+    "name": "Orion S/4HANA",
+    "customer": "Orion Group",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ007",
+    "name": "S/4HANA Rollout Wave 2",
+    "customer": "Various",
+    "startDate": "2026-02-01",
+    "endDate": "2026-08-31",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ008",
+    "name": "Meridian S/4HANA",
+    "customer": "Meridian Manufacturing",
+    "startDate": "2026-03-01",
+    "endDate": "2026-09-30",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ009",
+    "name": "Vertex S/4",
+    "customer": "Vertex Materials",
+    "startDate": "2026-02-15",
+    "endDate": "2026-06-15",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ010",
+    "name": "Apex Integration",
+    "customer": "Apex Systems",
+    "startDate": "2026-03-10",
+    "endDate": "2026-05-31",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ011",
+    "name": "Quantum Finance",
+    "customer": "Quantum Financial",
+    "startDate": "2026-03-01",
+    "endDate": "2026-04-30",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ012",
+    "name": "Abwesend",
+    "customer": "Internal",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ013",
+    "name": "Stellar Fiori",
+    "customer": "Stellar Enterprises",
+    "startDate": "2026-03-05",
+    "endDate": "2026-06-30",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ014",
+    "name": "Horizon Analytics",
+    "customer": "Horizon Data",
+    "startDate": "2026-02-20",
+    "endDate": "2026-05-20",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ015",
+    "name": "Cascade Platform",
+    "customer": "Cascade Digital",
+    "startDate": "2026-03-12",
+    "endDate": "2026-07-12",
+    "status": "Pipeline"
+  },
+  {
+    "id": "PRJ016",
+    "name": "Prism Analytics",
+    "customer": "Prism Consulting",
+    "startDate": "2026-03-08",
+    "endDate": "2026-05-08",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ017",
+    "name": "Nova S/4HANA",
+    "customer": "Nova Energy",
+    "startDate": "2026-02-01",
+    "endDate": "2026-11-30",
+    "status": "Active"
+  },
+  {
+    "id": "PRJ018",
+    "name": "Eclipse Cloud",
+    "customer": "Eclipse Technologies",
+    "startDate": "2026-03-15",
+    "endDate": "2026-06-15",
+    "status": "Pipeline"
+  }
+]
