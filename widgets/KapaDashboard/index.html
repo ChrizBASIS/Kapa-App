@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>KAPA-App SAC Custom Widget - Standalone Preview</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,23 +22,10 @@
         #widget-container { width: 100%; height: calc(100vh - 38px); }
     </style>
 
-    <!-- Legacy data scripts: use HARDCODED relative paths from widgets/KapaDashboard/ back to root -->
-    <script src="../../js/storage.js"></script>
-    <script src="../../js/calculations.js"></script>
-    <script src="../../js/skillManager.js"></script>
-
-    <!-- Override fetch for data/*.json paths used inside storage.js -->
-    <script>
-        (function() {
-            var _origFetch = window.fetch;
-            window.fetch = function(url, opts) {
-                if (typeof url === 'string' && url.startsWith('data/')) {
-                    url = '../../' + url;
-                }
-                return _origFetch.call(window, url, opts);
-            };
-        })();
-    </script>
+    <!-- All scripts bundled locally so Netlify can serve them from the widget root -->
+    <script src="js/storage.js"></script>
+    <script src="js/calculations.js"></script>
+    <script src="js/skillManager.js"></script>
 
     <!-- Clear stale empty holiday data so init() re-fetches correctly -->
     <script>
@@ -51,15 +39,13 @@
         })();
     </script>
 
-    <!-- holidayCalendar MUST load after fetch override so data/holidays.json resolves correctly -->
-    <script src="../../js/holidayCalendar.js"></script>
+    <script src="js/holidayCalendar.js"></script>
 
-    <!-- Widget component: NO type=module so it registers synchronously -->
+    <!-- Widget component -->
     <script src="KapaDashboard.js"></script>
 
-    <!-- Clear stale dark theme preference from old version -->
     <script>
-        if (localStorage.getItem('kapa_theme') === null || localStorage.getItem('kapa_theme') === 'dark') {
+        if (localStorage.getItem('kapa_theme') === null) {
             localStorage.setItem('kapa_theme', 'light');
         }
     </script>
