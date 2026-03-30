@@ -23,16 +23,20 @@ const KAPAHolidayCalendar = {
     init: async function() {
         const existing = localStorage.getItem(this.STORAGE_KEY);
         if (!existing) {
-            try {
-                const response = await fetch('data/holidays.json');
-                if (response.ok) {
-                    const data = await response.json();
-                    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
-                    console.log('Holiday calendars loaded');
+            // Try widget-local path first (works on Netlify), then project-root path (local dev)
+            const paths = ['data/holidays.json', '../../data/holidays.json'];
+            for (const path of paths) {
+                try {
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        const data = await response.json();
+                        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
+                        console.log('Holiday calendars loaded from:', path);
+                        break;
+                    }
+                } catch (e) {
+                    // try next path
                 }
-            } catch (error) {
-                console.error('Error loading holidays:', error);
-                localStorage.setItem(this.STORAGE_KEY, JSON.stringify({}));
             }
         }
     },
