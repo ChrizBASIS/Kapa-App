@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KAPA-App SAC Custom Widget - Standalone Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100vw; height: 100vh; 
+            background-color: #FAFAFA; overflow: hidden;
+            font-family: 'Inter', sans-serif; color: #18181B;
+        }
+        #nav-header {
+            padding: 10px 24px; background: #FFFFFF;
+            border-bottom: 1px solid #E4E4E7; font-size: 0.75rem;
+            color: #71717A; display: flex; justify-content: space-between;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        #widget-container { width: 100%; height: calc(100vh - 38px); }
+    </style>
+
+    <!-- Legacy data scripts: use HARDCODED relative paths from widgets/KapaDashboard/ back to root -->
+    <script src="../../js/storage.js"></script>
+    <script src="../../js/calculations.js"></script>
+    <script src="../../js/skillManager.js"></script>
+
+    <!-- Override fetch for data/*.json paths used inside storage.js -->
+    <script>
+        (function() {
+            var _origFetch = window.fetch;
+            window.fetch = function(url, opts) {
+                if (typeof url === 'string' && url.startsWith('data/')) {
+                    url = '../../' + url;
+                }
+                return _origFetch.call(window, url, opts);
+            };
+        })();
+    </script>
+
+    <!-- Clear stale empty holiday data so init() re-fetches correctly -->
+    <script>
+        (function() {
+            try {
+                var h = localStorage.getItem('kapa_holidays');
+                if (h === '{}' || h === 'null' || h === '') {
+                    localStorage.removeItem('kapa_holidays');
+                }
+            } catch(e) {}
+        })();
+    </script>
+
+    <!-- holidayCalendar MUST load after fetch override so data/holidays.json resolves correctly -->
+    <script src="../../js/holidayCalendar.js"></script>
+
+    <!-- Widget component: NO type=module so it registers synchronously -->
+    <script src="KapaDashboard.js"></script>
+
+    <!-- Clear stale dark theme preference from old version -->
+    <script>
+        if (localStorage.getItem('kapa_theme') === null || localStorage.getItem('kapa_theme') === 'dark') {
+            localStorage.setItem('kapa_theme', 'light');
+        }
+    </script>
+</head>
+<body>
+    <div id="nav-header">
+        <span>PREVIEW: SAC Custom Web Component [v3]</span>
+        <span id="status-indicator">Loading...</span>
+    </div>
+    <div id="widget-container">
+        <kapa-dashboard id="myWidget"></kapa-dashboard>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", async function() {
+            var statusEl = document.getElementById('status-indicator');
+            
+            // Bind const globals to window (they use const, not var)
+            if (typeof KAPAStorage !== 'undefined') window.KAPAStorage = KAPAStorage;
+            if (typeof KAPACalculations !== 'undefined') window.KAPACalculations = KAPACalculations;
+            if (typeof holidayCalendar !== 'undefined') window.holidayCalendar = holidayCalendar;
+            if (typeof skillManager !== 'undefined') window.skillManager = skillManager;
+
+            if (window.KAPAStorage) {
+                try {
+                    await window.KAPAStorage.init();
+                    window.startWeek = 10;
+                    statusEl.textContent = 'Data OK';
+                    statusEl.style.color = '#4ade80';
+                } catch(e) {
+                    statusEl.textContent = 'Data Error';
+                    statusEl.style.color = '#f87171';
+                    console.error('Storage init failed:', e);
+                }
+            } else {
+                statusEl.textContent = 'No Storage (Mock Mode)';
+                statusEl.style.color = '#fbbf24';
+            }
+
+            var widget = document.getElementById('myWidget');
+            if (widget && typeof widget.onCustomWidgetAfterUpdate === 'function') {
+                widget.onCustomWidgetAfterUpdate();
+            } else {
+                statusEl.textContent = 'Widget Error';
+                statusEl.style.color = '#f87171';
+                console.error('Widget not registered. Check KapaDashboard.js for syntax errors.');
+            }
+        });
+    </script>
+</body>
+</html>

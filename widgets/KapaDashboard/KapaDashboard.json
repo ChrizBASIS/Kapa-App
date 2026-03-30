@@ -1,0 +1,41 @@
+{
+    "name": "KapaDashboard",
+    "description": "KAPA-App Premium UI Web Component",
+    "newInstancePrefix": "KapaDashboard",
+    "vendor": "CNT Management Consulting AG",
+    "eula": "",
+    "license": "",
+    "id": "com.cnt.kapadashboard",
+    "version": "1.0.0",
+    "icon": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"%233B82F6\"><path d=\"M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z\"/></svg>",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "kapa-dashboard",
+            "url": "KapaDashboard.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "width": {
+            "type": "integer",
+            "default": 1200
+        },
+        "height": {
+            "type": "integer",
+            "default": 800
+        }
+    },
+    "methods": {
+        "refreshData": {
+            "description": "Forces the dashboard to refresh and recalculate KPIs.",
+            "parameters": []
+        }
+    },
+    "events": {
+        "onNavRequest": {
+            "description": "Fired when the user requests navigation to a different module."
+        }
+    }
+}

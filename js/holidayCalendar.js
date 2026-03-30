@@ -297,3 +297,15 @@ const KAPAHolidayCalendar = {
         dialog.open();
     }
 };
+
+// Expose globally for the custom widget and standalone preview
+window.holidayCalendar = KAPAHolidayCalendar;
+window.KAPAHolidayCalendar = KAPAHolidayCalendar;
+
+// Auto-initialise: load holiday data from data/holidays.json into localStorage.
+// The init() function already checks whether data exists, so this is idempotent.
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => KAPAHolidayCalendar.init());
+} else {
+    KAPAHolidayCalendar.init();
+}

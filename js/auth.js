@@ -1,61 +1,61 @@
 // KAPA-App Authorization — Role-based access control
 const KAPAAuth = {
     STORAGE_KEY: 'kapa_current_role',
-    
+
     ROLES: {
         ADMIN: 'admin',
         MANAGER: 'manager',
         VIEWER: 'viewer'
     },
-    
+
     ROLE_LABELS: {
         'admin': 'Admin',
         'manager': 'Manager',
         'viewer': 'Viewer'
     },
-    
+
     ROLE_DESCRIPTIONS: {
         'admin': 'Full access: edit data, manage settings, export',
         'manager': 'Edit comments, view settings, export',
         'viewer': 'Read-only access to all views'
     },
-    
-    getCurrentRole: function() {
+
+    getCurrentRole: function () {
         return localStorage.getItem(this.STORAGE_KEY) || null;
     },
-    
-    setRole: function(role) {
+
+    setRole: function (role) {
         localStorage.setItem(this.STORAGE_KEY, role);
     },
-    
-    canEditComments: function() {
+
+    canEditComments: function () {
         const role = this.getCurrentRole();
         return role === this.ROLES.ADMIN || role === this.ROLES.MANAGER;
     },
-    
-    canChangeSettings: function() {
+
+    canChangeSettings: function () {
         return this.getCurrentRole() === this.ROLES.ADMIN;
     },
-    
-    canManageSkills: function() {
+
+    canManageSkills: function () {
         return this.getCurrentRole() === this.ROLES.ADMIN;
     },
-    
-    canExport: function() {
+
+    canExport: function () {
         const role = this.getCurrentRole();
         return role === this.ROLES.ADMIN || role === this.ROLES.MANAGER;
     },
-    
-    canManageAreas: function() {
+
+    canManageAreas: function () {
         return this.getCurrentRole() === this.ROLES.ADMIN;
     },
-    
-    canSaveFilterVariants: function() {
+
+    canSaveFilterVariants: function () {
         const role = this.getCurrentRole();
         return role === this.ROLES.ADMIN || role === this.ROLES.MANAGER;
     },
-    
-    showRoleSelectionDialog: function(onRoleSelected) {
+
+    showRoleSelectionDialog: function (onRoleSelected) {
         const roleSelect = new sap.m.Select({
             width: "100%",
             items: Object.keys(this.ROLES).map(key => {
@@ -66,13 +66,13 @@ const KAPAAuth = {
                 });
             })
         });
-        
+
         // Pre-select current role if exists
         const currentRole = this.getCurrentRole();
         if (currentRole) {
             roleSelect.setSelectedKey(currentRole);
         }
-        
+
         const dialog = new sap.m.Dialog({
             title: "KAPA-App — Select Role",
             contentWidth: "450px",
@@ -91,7 +91,7 @@ const KAPAAuth = {
             beginButton: new sap.m.Button({
                 text: "Continue",
                 type: "Emphasized",
-                press: function() {
+                press: function () {
                     const selectedRole = roleSelect.getSelectedKey();
                     KAPAAuth.setRole(selectedRole);
                     dialog.close();
@@ -100,15 +100,15 @@ const KAPAAuth = {
                     }
                 }
             }),
-            escapeHandler: function(promise) {
+            escapeHandler: function (promise) {
                 // Prevent closing without selection
                 promise.reject();
             },
-            afterClose: function() {
+            afterClose: function () {
                 dialog.destroy();
             }
         });
-        
+
         dialog.open();
     }
 };

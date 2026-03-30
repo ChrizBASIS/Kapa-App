@@ -1,5 +1,5 @@
 [build]
-  publish = "."
+  publish = "widgets/KapaDashboard"
   command = "echo 'No build required - static site'"
 
 [[redirects]]
