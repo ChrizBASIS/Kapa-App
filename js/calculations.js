@@ -184,12 +184,12 @@ const KAPACalculations = {
         return weeks;
     },
     
-    aggregateByArea: function() {
+    aggregateByArea: function(weeks) {
         const employees = KAPAStorage.get(KAPAStorage.KEYS.EMPLOYEES) || [];
         const aggregation = {};
         
         employees.forEach(emp => {
-            const freeCapacity = this.getFreeCapacity(emp.id);
+            const freeCapacity = weeks ? this.getFreeCapacityForWeeks(emp.id, weeks) : this.getFreeCapacity(emp.id);
             
             if (!aggregation[emp.area]) {
                 aggregation[emp.area] = {
@@ -213,12 +213,12 @@ const KAPACalculations = {
         return Object.values(aggregation).sort((a, b) => b.freeDays - a.freeDays);
     },
     
-    aggregateByRegion: function() {
+    aggregateByRegion: function(weeks) {
         const employees = KAPAStorage.get(KAPAStorage.KEYS.EMPLOYEES) || [];
         const aggregation = {};
         
         employees.forEach(emp => {
-            const freeCapacity = this.getFreeCapacity(emp.id);
+            const freeCapacity = weeks ? this.getFreeCapacityForWeeks(emp.id, weeks) : this.getFreeCapacity(emp.id);
             
             if (!aggregation[emp.region]) {
                 aggregation[emp.region] = {
@@ -242,12 +242,12 @@ const KAPACalculations = {
         return Object.values(aggregation).sort((a, b) => b.freeDays - a.freeDays);
     },
     
-    aggregateBySkills: function() {
+    aggregateBySkills: function(weeks) {
         const employees = KAPAStorage.get(KAPAStorage.KEYS.EMPLOYEES) || [];
         const aggregation = {};
         
         employees.forEach(emp => {
-            const freeCapacity = this.getFreeCapacity(emp.id);
+            const freeCapacity = weeks ? this.getFreeCapacityForWeeks(emp.id, weeks) : this.getFreeCapacity(emp.id);
             
             if (freeCapacity > 0 && emp.skills && emp.skills.length > 0) {
                 emp.skills.forEach(skill => {

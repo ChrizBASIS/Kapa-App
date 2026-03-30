@@ -1005,9 +1005,9 @@
             // Aggregations
             let areaAgg = [], regionAgg = [], skillAgg = [];
             if(this.hasRealData()) {
-                areaAgg = window.KAPACalculations.aggregateByArea();
-                regionAgg = window.KAPACalculations.aggregateByRegion();
-                skillAgg = window.KAPACalculations.aggregateBySkills();
+                areaAgg = window.KAPACalculations.aggregateByArea(this._planningWeeks);
+                regionAgg = window.KAPACalculations.aggregateByRegion(this._planningWeeks);
+                skillAgg = window.KAPACalculations.aggregateBySkills(this._planningWeeks);
             } else {
                 const areas = {}; const regions = {};
                 emps.forEach(e => {
