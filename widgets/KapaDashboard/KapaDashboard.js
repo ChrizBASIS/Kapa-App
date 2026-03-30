@@ -1268,14 +1268,15 @@
             };
 
             let headers = '';
-            for(let i=0;i<weeks;i++) headers += `<th>W${startWeek+i}</th>`;
+            for(let i=0;i<weeks;i++) headers += `<th style="width:120px;min-width:120px;">W${startWeek+i}</th>`;
+            headers += `<th style="width:100%;"></th>`; // Spacer column
+
 
             const ampelSvg = {
                 green: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3z"></path><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>',
                 yellow: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="4" x2="10" y2="20"></line><line x1="14" y1="4" x2="14" y2="20"></line></svg>',
                 red: '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 2l11 19H1L12 2zm1 14v2h-2v-2h2zm0-7v5h-2V9h2z"/></svg>'
             };
-            const ampelColor = { green: '#318239', yellow: '#B27B2A', red: '#B43232' };
 
             let html = `<div class="premium-table-container animate-in delay-1">
                 <div style="padding:16px 20px;font-weight:600;border-bottom:1px solid var(--border-subtle);display:flex;justify-content:space-between;align-items:center;">
@@ -1283,14 +1284,15 @@
                 </div>
                 <table class="premium-table"><thead><tr>
                     <th style="width:30px;"><input type="checkbox" id="tv-select-all"></th>
-                    <th>Employee</th><th>Country</th><th>Utilization</th>${headers}
+                    <th style="width:240px;min-width:240px;">Employee</th>
+                    <th style="width:80px;min-width:80px;">Country</th>
+                    <th style="width:130px;min-width:130px;">Utilization</th>${headers}
                 </tr></thead><tbody>`;
 
             employees.forEach(emp => {
                 const ai = this.getAmpelInfo(emp);
                 const isChecked = this._selectedEmployees.has(emp.id) ? 'checked' : '';
                 const svgIcon = ampelSvg[ai.status] || '';
-                const iconColor = ampelColor[ai.status] || 'var(--text-primary)';
                 let cells = '';
                 for(let i=0;i<weeks;i++) cells += `<td style="vertical-align:top;min-width:120px;">${getWeekHtml(emp,startWeek+i)}</td>`;
                 html += `<tr>
@@ -1298,9 +1300,10 @@
                     <td style="vertical-align:top;"><div class="cell-detail"><span class="emp-name-link" data-empid="${emp.id}" style="font-weight:600;color:var(--accent-primary);cursor:pointer;text-decoration:none;transition:color 0.2s;">${emp.lastName}, ${emp.firstName}</span><span class="cell-subtitle">${emp.team}</span></div></td>
                     <td style="vertical-align:top;">${emp.country}</td>
                     <td style="vertical-align:top;white-space:nowrap;">
-                        <span style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12px;color:${iconColor};">${svgIcon} <span>${ai.utilization}%</span></span>
+                        <span class="status-badge util-badge ${ai.status}">${svgIcon} <span>${ai.utilization}%</span></span>
                     </td>
                     ${cells}
+                    <td></td>
                 </tr>`;
             });
             html += `</tbody></table></div>`;
@@ -1319,7 +1322,6 @@
                 yellow: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="4" x2="10" y2="20"></line><line x1="14" y1="4" x2="14" y2="20"></line></svg>',
                 red: '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 2l11 19H1L12 2zm1 14v2h-2v-2h2zm0-7v5h-2V9h2z"/></svg>'
             };
-            const ampelColor = { green: '#318239', yellow: '#B27B2A', red: '#B43232' };
 
             let html = `<div class="premium-table-container animate-in delay-1">
                 <div style="padding:16px 20px;font-weight:600;border-bottom:1px solid var(--border-subtle);display:flex;justify-content:space-between;align-items:center;">
@@ -1340,7 +1342,6 @@
                 const comment = this._comments[emp.id] || '';
                 const isChecked = this._selectedEmployees.has(emp.id) ? 'checked' : '';
                 const svgIcon = ampelSvg[ai.status] || '';
-                const iconColor = ampelColor[ai.status] || 'var(--text-primary)';
                 const commentCell = canEdit
                     ? `<input class="comment-input" type="text" placeholder="Enter comment..." value="${comment}" data-emp-id="${emp.id}">`
                     : `<span style="font-size:12px;color:var(--text-muted);">${comment || '—'}</span>`;
@@ -1353,7 +1354,7 @@
                     <td><span class="emp-name-link" data-empid="${emp.id}" style="font-weight:600;color:var(--accent-primary);cursor:pointer;text-decoration:none;transition:color 0.2s;">${emp.lastName}, ${emp.firstName}</span></td>
                     <td>${emp.country}</td>
                     <td style="white-space:nowrap;">
-                        <span style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12px;color:${iconColor};">${svgIcon} <span>${ai.utilization}%</span></span>
+                        <span class="status-badge util-badge ${ai.status}">${svgIcon} <span>${ai.utilization}%</span></span>
                     </td>
                     <td class="monospaced">${wd}</td>
                     <td>${emp.role}</td>

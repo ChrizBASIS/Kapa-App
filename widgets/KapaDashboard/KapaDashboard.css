@@ -544,11 +544,11 @@
 .status-badge.green::before { background: var(--accent-success); box-shadow: 0 0 6px var(--accent-success); }
 
 .status-badge.yellow {
-    background: var(--accent-warning-bg);
-    color: var(--accent-warning);
-    border: 1px solid rgba(217, 119, 6, 0.15);
+    background: rgba(202, 138, 4, 0.08); /* Brighter yellow #CA8A04 */
+    color: #CA8A04;
+    border: 1px solid rgba(202, 138, 4, 0.15);
 }
-.status-badge.yellow::before { background: var(--accent-warning); box-shadow: 0 0 6px var(--accent-warning); }
+.status-badge.yellow::before { background: #CA8A04; box-shadow: 0 0 6px #CA8A04; }
 
 .status-badge.red {
     background: var(--accent-danger-bg);
@@ -563,6 +563,13 @@
     border: 1px solid rgba(99, 102, 241, 0.15);
 }
 .status-badge.blue::before { background: var(--accent-primary); box-shadow: 0 0 6px var(--accent-primary); }
+
+.status-badge.util-badge::before {
+    display: none;
+}
+.status-badge.util-badge svg {
+    margin-right: -2px;
+}
 
 /* ================================================================
    PROGRESS BAR
