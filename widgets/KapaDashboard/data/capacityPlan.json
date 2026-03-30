@@ -1,0 +1,80 @@
+[
+  {"id": "CAP001", "employeeId": "EMP001", "week": 10, "projectId": "PRJ001", "projectName": "Internal", "status": "Option", "days": 2.5, "skills": ["SAP S/4HANA"]},
+  {"id": "CAP002", "employeeId": "EMP001", "week": 10, "projectId": "PRJ004", "projectName": "Nexus Cloud", "status": "Option", "days": 2, "skills": ["SD"]},
+  {"id": "CAP003", "employeeId": "EMP001", "week": 11, "projectId": "PRJ002", "projectName": "Phoenix Digital", "status": "Overbooked", "days": 5, "skills": ["SAP S/4HANA", "SD"]},
+  {"id": "CAP004", "employeeId": "EMP001", "week": 12, "projectId": "PRJ003", "projectName": "Atlas Transform", "status": "Firm", "days": 3, "skills": ["SD"]},
+  {"id": "CAP005", "employeeId": "EMP001", "week": 13, "projectId": "PRJ003", "projectName": "Atlas Transform", "status": "Firm", "days": 4, "skills": ["SD"]},
+  {"id": "CAP006", "employeeId": "EMP001", "week": 14, "projectId": "PRJ003", "projectName": "Atlas Transform", "status": "Firm", "days": 5, "skills": ["SD"]},
+  
+  {"id": "CAP007", "employeeId": "EMP002", "week": 10, "projectId": "PRJ001", "projectName": "Internal", "status": "Firm", "days": 5, "skills": ["MM"]},
+  {"id": "CAP008", "employeeId": "EMP002", "week": 11, "projectId": "PRJ001", "projectName": "Internal", "status": "Firm", "days": 5, "skills": ["MM"]},
+  {"id": "CAP009", "employeeId": "EMP002", "week": 12, "projectId": "PRJ005", "projectName": "Zenith ERP", "status": "Option", "days": 3, "skills": ["WM"]},
+  {"id": "CAP010", "employeeId": "EMP002", "week": 13, "projectId": "PRJ005", "projectName": "Zenith ERP", "status": "Option", "days": 4, "skills": ["WM"]},
+  
+  {"id": "CAP011", "employeeId": "EMP003", "week": 10, "projectId": "PRJ006", "projectName": "Orion S/4HANA", "status": "Firm", "days": 4, "skills": ["Ariba"]},
+  {"id": "CAP012", "employeeId": "EMP003", "week": 11, "projectId": "PRJ006", "projectName": "Orion S/4HANA", "status": "Firm", "days": 5, "skills": ["Ariba"]},
+  {"id": "CAP013", "employeeId": "EMP003", "week": 12, "projectId": "PRJ006", "projectName": "Orion S/4HANA", "status": "Firm", "days": 3, "skills": ["Ariba"]},
+  
+  {"id": "CAP014", "employeeId": "EMP004", "week": 10, "projectId": "PRJ018", "projectName": "Eclipse Cloud", "status": "Option", "days": 2, "skills": ["SuccessFactors"]},
+  {"id": "CAP015", "employeeId": "EMP004", "week": 14, "projectId": "PRJ018", "projectName": "Eclipse Cloud", "status": "Option", "days": 3, "skills": ["SuccessFactors"]},
+  
+  {"id": "CAP016", "employeeId": "EMP005", "week": 10, "projectId": "PRJ017", "projectName": "Nova S/4HANA", "status": "Firm", "days": 5, "skills": ["FI/CO"]},
+  {"id": "CAP017", "employeeId": "EMP005", "week": 11, "projectId": "PRJ017", "projectName": "Nova S/4HANA", "status": "Firm", "days": 5, "skills": ["FI/CO"]},
+  {"id": "CAP018", "employeeId": "EMP005", "week": 12, "projectId": "PRJ017", "projectName": "Nova S/4HANA", "status": "Firm", "days": 5, "skills": ["FI/CO"]},
+  {"id": "CAP019", "employeeId": "EMP005", "week": 13, "projectId": "PRJ017", "projectName": "Nova S/4HANA", "status": "Firm", "days": 4, "skills": ["FI/CO"]},
+  
+  {"id": "CAP020", "employeeId": "EMP006", "week": 10, "projectId": "PRJ001", "projectName": "Internal", "status": "Option", "days": 1, "skills": ["SAPUI5"]},
+  {"id": "CAP021", "employeeId": "EMP006", "week": 11, "projectId": "PRJ007", "projectName": "S/4HANA Rollout Wave 2", "status": "Firm", "days": 3, "skills": ["Fiori"]},
+  {"id": "CAP022", "employeeId": "EMP006", "week": 12, "projectId": "PRJ007", "projectName": "S/4HANA Rollout Wave 2", "status": "Firm", "days": 4, "skills": ["Fiori"]},
+  
+  {"id": "CAP023", "employeeId": "EMP007", "week": 10, "projectId": "PRJ008", "projectName": "Meridian S/4HANA", "status": "Firm", "days": 5, "skills": ["PP"]},
+  {"id": "CAP024", "employeeId": "EMP007", "week": 11, "projectId": "PRJ008", "projectName": "Meridian S/4HANA", "status": "Firm", "days": 5, "skills": ["PP"]},
+  {"id": "CAP025", "employeeId": "EMP007", "week": 12, "projectId": "PRJ008", "projectName": "Meridian S/4HANA", "status": "Firm", "days": 5, "skills": ["PP"]},
+  {"id": "CAP026", "employeeId": "EMP007", "week": 13, "projectId": "PRJ008", "projectName": "Meridian S/4HANA", "status": "Firm", "days": 5, "skills": ["PP"]},
+  
+  {"id": "CAP027", "employeeId": "EMP008", "week": 10, "projectId": "PRJ012", "projectName": "Abwesend", "status": "Firm", "days": 5, "skills": []},
+  {"id": "CAP028", "employeeId": "EMP008", "week": 11, "projectId": "PRJ015", "projectName": "Cascade Platform", "status": "Option", "days": 2, "skills": ["Consulting"]},
+  
+  {"id": "CAP029", "employeeId": "EMP009", "week": 10, "projectId": "PRJ009", "projectName": "Vertex S/4", "status": "Firm", "days": 4, "skills": ["Ariba"]},
+  {"id": "CAP030", "employeeId": "EMP009", "week": 11, "projectId": "PRJ009", "projectName": "Vertex S/4", "status": "Firm", "days": 5, "skills": ["Ariba"]},
+  {"id": "CAP031", "employeeId": "EMP009", "week": 12, "projectId": "PRJ009", "projectName": "Vertex S/4", "status": "Firm", "days": 3, "skills": ["Ariba"]},
+  
+  {"id": "CAP032", "employeeId": "EMP010", "week": 10, "projectId": "PRJ010", "projectName": "Apex Integration", "status": "Firm", "days": 5, "skills": ["SD"]},
+  {"id": "CAP033", "employeeId": "EMP010", "week": 11, "projectId": "PRJ010", "projectName": "Apex Integration", "status": "Firm", "days": 5, "skills": ["SD"]},
+  {"id": "CAP034", "employeeId": "EMP010", "week": 12, "projectId": "PRJ010", "projectName": "Apex Integration", "status": "Firm", "days": 4, "skills": ["SD"]},
+  
+  {"id": "CAP035", "employeeId": "EMP011", "week": 10, "projectId": "PRJ001", "projectName": "Internal", "status": "Firm", "days": 3, "skills": ["Analytics"]},
+  {"id": "CAP036", "employeeId": "EMP011", "week": 11, "projectId": "PRJ001", "projectName": "Internal", "status": "Firm", "days": 2, "skills": ["Analytics"]},
+  {"id": "CAP037", "employeeId": "EMP011", "week": 12, "projectId": "PRJ016", "projectName": "Prism Analytics", "status": "Option", "days": 3, "skills": ["Python"]},
+  
+  {"id": "CAP038", "employeeId": "EMP012", "week": 11, "projectId": "PRJ011", "projectName": "Quantum Finance", "status": "Firm", "days": 4, "skills": ["Concur"]},
+  {"id": "CAP039", "employeeId": "EMP012", "week": 12, "projectId": "PRJ011", "projectName": "Quantum Finance", "status": "Firm", "days": 5, "skills": ["Concur"]},
+  
+  {"id": "CAP040", "employeeId": "EMP013", "week": 10, "projectId": "PRJ001", "projectName": "Internal", "status": "Option", "days": 2, "skills": ["ABAP"]},
+  {"id": "CAP041", "employeeId": "EMP013", "week": 11, "projectId": "PRJ007", "projectName": "S/4HANA Rollout Wave 2", "status": "Firm", "days": 4, "skills": ["BTP"]},
+  {"id": "CAP042", "employeeId": "EMP013", "week": 12, "projectId": "PRJ007", "projectName": "S/4HANA Rollout Wave 2", "status": "Firm", "days": 5, "skills": ["BTP"]},
+  
+  {"id": "CAP043", "employeeId": "EMP014", "week": 10, "projectId": "PRJ003", "projectName": "Atlas Transform", "status": "Firm", "days": 3, "skills": ["QM"]},
+  {"id": "CAP044", "employeeId": "EMP014", "week": 11, "projectId": "PRJ003", "projectName": "Atlas Transform", "status": "Firm", "days": 4, "skills": ["QM"]},
+  
+  {"id": "CAP045", "employeeId": "EMP015", "week": 11, "projectId": "PRJ013", "projectName": "Stellar Fiori", "status": "Firm", "days": 3, "skills": ["Fiori"]},
+  {"id": "CAP046", "employeeId": "EMP015", "week": 12, "projectId": "PRJ013", "projectName": "Stellar Fiori", "status": "Firm", "days": 4, "skills": ["Fiori"]},
+  {"id": "CAP047", "employeeId": "EMP015", "week": 13, "projectId": "PRJ013", "projectName": "Stellar Fiori", "status": "Firm", "days": 5, "skills": ["Fiori"]},
+  
+  {"id": "CAP048", "employeeId": "EMP016", "week": 10, "projectId": "PRJ014", "projectName": "Horizon Analytics", "status": "Firm", "days": 5, "skills": ["IBP"]},
+  {"id": "CAP049", "employeeId": "EMP016", "week": 11, "projectId": "PRJ014", "projectName": "Horizon Analytics", "status": "Firm", "days": 5, "skills": ["IBP"]},
+  {"id": "CAP050", "employeeId": "EMP016", "week": 12, "projectId": "PRJ014", "projectName": "Horizon Analytics", "status": "Firm", "days": 4, "skills": ["IBP"]},
+  
+  {"id": "CAP051", "employeeId": "EMP017", "week": 12, "projectId": "PRJ001", "projectName": "Internal", "status": "Option", "days": 2, "skills": ["Analytics"]},
+  {"id": "CAP052", "employeeId": "EMP017", "week": 13, "projectId": "PRJ015", "projectName": "Cascade Platform", "status": "Option", "days": 3, "skills": ["SD"]},
+  
+  {"id": "CAP053", "employeeId": "EMP018", "week": 10, "projectId": "PRJ017", "projectName": "Nova S/4HANA", "status": "Firm", "days": 4, "skills": ["WM"]},
+  {"id": "CAP054", "employeeId": "EMP018", "week": 11, "projectId": "PRJ017", "projectName": "Nova S/4HANA", "status": "Firm", "days": 5, "skills": ["WM"]},
+  
+  {"id": "CAP055", "employeeId": "EMP019", "week": 10, "projectId": "PRJ012", "projectName": "Abwesend", "status": "Firm", "days": 5, "skills": []},
+  {"id": "CAP056", "employeeId": "EMP019", "week": 11, "projectId": "PRJ001", "projectName": "Internal", "status": "Firm", "days": 2, "skills": ["Consulting"]},
+  
+  {"id": "CAP057", "employeeId": "EMP020", "week": 10, "projectId": "PRJ006", "projectName": "Orion S/4HANA", "status": "Firm", "days": 5, "skills": ["FI/CO"]},
+  {"id": "CAP058", "employeeId": "EMP020", "week": 11, "projectId": "PRJ006", "projectName": "Orion S/4HANA", "status": "Firm", "days": 5, "skills": ["FI/CO"]},
+  {"id": "CAP059", "employeeId": "EMP020", "week": 12, "projectId": "PRJ006", "projectName": "Orion S/4HANA", "status": "Firm", "days": 5, "skills": ["FI/CO"]}
+]
